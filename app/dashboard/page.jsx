@@ -3,8 +3,14 @@ import { useTab } from "../../Components/Context/ContextTabs";
 import { Header } from "@/Components/header/Header";
 import { Sidebar } from "@/Components/sidebar/Sidebar";
 import { Box, Tabs, Text } from "@radix-ui/themes";
-// import { Tabs } from "@radix-ui/react-tabs";
-// import { Box, Text } from "@radix-ui/themes";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Dashboard() {
   const { selectedTab } = useTab();
@@ -13,9 +19,24 @@ export default function Dashboard() {
       <Tabs.Root value={selectedTab}>
         <Box pt="3">
           <Tabs.Content value="overview" className="TabsContent">
-            <Text size="2">overview</Text>
+            <div className="flex gap-5">
+              <Card className="w-60 h-60 bg-violet-100">
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+              </Card>
+              <Card className="w-60 h-60 bg-white">
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+              </Card>
+              <Card className="w-60 h-60 bg-white">
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+              </Card>
+            </div>
           </Tabs.Content>
-
           <Tabs.Content value="sleep" className="TabsContent">
             <Text size="2">sleep.</Text>
           </Tabs.Content>
