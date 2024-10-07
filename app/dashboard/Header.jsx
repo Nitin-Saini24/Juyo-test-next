@@ -19,7 +19,7 @@ import { useTab } from "../../Components/Context/ContextTabs";
 export const Header = () => {
   const { selectedTab, setSelectedTab } = useTab();
   return (
-    <header className="sticky top-0 z-[999] flex w-full bg-white  dark:bg-boxdark dark:drop-shadow-none">
+    <header className="sticky top-0 z-[999] flex w-full bg-white  dark:bg-boxdark dark:drop-shadow-none pt-5">
       <div className="w-full">
         <div className="bg-white ">
           <div>

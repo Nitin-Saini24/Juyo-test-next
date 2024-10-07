@@ -8,11 +8,7 @@
 @import "@radix-ui/colors/violet.css";
 
 /* reset */
-button,
-fieldset,
-input {
-	all: unset;
-}
+
 
 .TabsRoot {
 	display: flex;
@@ -154,6 +150,22 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   } 
+
+.scrollbar_1px::-webkit-scrollbar {
+width: 1px;
+height: 8px;
+}
+
+.scrollbar_1px::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+} 
+.scrollbar_1px::-webkit-scrollbar-button{
+  height: 1px;
+  width: 1px;
+  border-radius: 5px;
+} 
+
   @layer base {
   :root {
     --background: 0 0% 100%;
@@ -216,4 +228,11 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.ac_svg .lucide {
+	background: rgb(237 233 254);
+	border: 1px solid rgb(158, 139, 243);
+	border-radius: 50%;
+	padding-top: 2px;
 }
