@@ -18,8 +18,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState } from "react";
-import ChartOne from "@/Components/Charts/ChartOne";
-import ChartTwo from "@/Components/Charts/ChartTwo";
+// import ChartOne from "@/Components/Charts/ChartOne";
+// import ChartTwo from "@/Components/Charts/ChartTwo";
 
 export default function Dashboard() {
   const { selectedTab } = useTab();
@@ -363,8 +363,8 @@ export default function Dashboard() {
                   </p>
                 </CardContent>
               </Card>
-              <ChartTwo />
-              <ChartOne />
+              {/* <ChartTwo /> */}
+              {/* <ChartOne /> */}
             </div>
             <div className="mt-5 flex gap-10">
               <div>
