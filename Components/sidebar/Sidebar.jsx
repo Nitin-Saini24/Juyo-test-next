@@ -52,12 +52,20 @@ export const Sidebar = () => {
             </span>
             <span
               className={
-                isActive === "/message"
+                isActive === "/messages"
                   ? "bg-white p-1 rounded-lg my-3 shadow-md"
                   : "my-3"
               }
             >
-              <TiMessages className=" md:w-5 md:h-5 text-gray-400" />
+              <Link href="messages">
+                <TiMessages
+                  className={`md:w-6 md:h-6  ${
+                    isActive === "/messages"
+                      ? "text-violet-400"
+                      : "text-gray-400"
+                  }  `}
+                />
+              </Link>
             </span>
           </div>
           <div className="flex-col flex items-center">

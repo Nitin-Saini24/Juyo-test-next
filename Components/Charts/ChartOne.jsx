@@ -9,11 +9,11 @@ const options = {
     position: "top",
     horizontalAlign: "left",
   },
-  colors: ["#3C50E0", "#80CAEE"],
+  colors: ["#7F56D9", "#230555"],
   chart: {
     fontFamily: "Satoshi, sans-serif",
-    height: 335,
     type: "area",
+    height: "150", // Use '100%' for dynamic height
     dropShadow: {
       enabled: true,
       color: "#623CEA14",
@@ -26,24 +26,7 @@ const options = {
       show: false,
     },
   },
-  responsive: [
-    {
-      breakpoint: 1024,
-      options: {
-        chart: {
-          height: 300,
-        },
-      },
-    },
-    {
-      breakpoint: 1366,
-      options: {
-        chart: {
-          height: 350,
-        },
-      },
-    },
-  ],
+
   stroke: {
     width: [2, 2],
     curve: "straight",
@@ -63,36 +46,23 @@ const options = {
   dataLabels: {
     enabled: false,
   },
-  markers: {
-    size: 4,
-    colors: "#fff",
-    strokeColors: ["#3056D3", "#80CAEE"],
-    strokeWidth: 3,
-    strokeOpacity: 0.9,
-    strokeDashArray: 0,
-    fillOpacity: 1,
-    discrete: [],
-    hover: {
-      size: undefined,
-      sizeOffset: 5,
-    },
-  },
+  // markers: {
+  //   size: 4,
+  //   colors: "#fff",
+  //   strokeColors: ["#3056D3", "#80CAEE"],
+  //   strokeWidth: 3,
+  //   strokeOpacity: 0.9,
+  //   strokeDashArray: 0,
+  //   fillOpacity: 1,
+  //   discrete: [],
+  //   hover: {
+  //     size: undefined,
+  //     sizeOffset: 5,
+  //   },
+  // },
   xaxis: {
     type: "category",
-    categories: [
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-    ],
+    categories: ["Jan", "Mar", "May", "Jul", "Sep", "Nov", "Dec"],
     axisBorder: {
       show: false,
     },
@@ -116,41 +86,25 @@ const ChartOne = () => {
     series: [
       {
         name: "Product One",
-        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 45],
+        data: [23, 11, 22, 27, 13, 22, 37],
       },
       {
         name: "Product Two",
-        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 51],
+        data: [30, 25, 36, 30, 45, 35, 64],
       },
     ],
   });
 
-  const handleReset = () => {
-    setState((prevState) => ({
-      ...prevState,
-    }));
-  };
-
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
+    <div className="col-span-12 rounded-md border border-stroke bg-white pt-2 px-1 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
       <div className="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap">
         <div className="flex w-full flex-wrap gap-3 sm:gap-5">
-          <div className="flex min-w-47.5">
+          <div className="flex min-w-46">
             <span className="mt-1 mr-2 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-primary">
               <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
             </span>
             <div className="w-full">
-              <p className="font-semibold text-primary">Total Revenue</p>
-              <p className="text-sm font-medium">12.04.2022 - 12.05.2022</p>
-            </div>
-          </div>
-          <div className="flex min-w-47.5">
-            <span className="mt-1 mr-2 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-secondary">
-              <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
-            </span>
-            <div className="w-full">
-              <p className="font-semibold text-secondary">Total Sales</p>
-              <p className="text-sm font-medium">12.04.2022 - 12.05.2022</p>
+              <p className="font-semibold text-primary">Sleep Efficiency</p>
             </div>
           </div>
         </div>
@@ -175,7 +129,7 @@ const ChartOne = () => {
             options={options}
             series={state.series}
             type="area"
-            height={350}
+            height="180" // Set this to 100% to make the chart responsive to the container
           />
         </div>
       </div>

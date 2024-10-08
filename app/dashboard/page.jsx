@@ -27,14 +27,14 @@ export default function Dashboard() {
 
   return (
     <>
-      <Tabs.Root value={selectedTab}>
-        <Box pt="3">
+      <Tabs.Root value={selectedTab} className="py-4">
+        <Box>
           <Tabs.Content value="overview" className="TabsContent">
             <div className="flex gap-5">
-              <Card className="w-60 h-60 bg-violet-100 ">
+              <Card className="w-72 h-60 bg-violet-100 ">
                 <CardContent>
                   <p className="mt-3">AI Summery</p>
-                  <p className="mt-3 text-sm">
+                  <p className="mt-3 text-sm DMSans">
                     Get to bed early today to meet your sleep goal between
                     8:45pm-9:30pm Get to bed early today to meet your sleep goal
                     between 8:45pm-9:30pm
@@ -44,7 +44,7 @@ export default function Dashboard() {
               <Accordion
                 type="single"
                 collapsible
-                className="w-60 h-60 ac_svg max-h-60 overflow-auto no-scrollbar"
+                className="w-80 h-60 ac_svg max-h-60 overflow-auto no-scrollbar"
                 value={openItem}
                 onValueChange={(value) => setOpenItem(value)}
               >
@@ -52,12 +52,12 @@ export default function Dashboard() {
                   value="item-1"
                   className={`border-0 px-3  ${
                     openItem === "item-1"
-                      ? "bg-white shadow-sm rounded-md border-gray-100 border"
+                      ? "bg-white shadow-sm rounded-md border-gray-100 border h-44"
                       : ""
                   }`}
                 >
                   <AccordionTrigger>Onboarding</AccordionTrigger>
-                  <AccordionContent className="text-sm">
+                  <AccordionContent className="text-sm DMSans">
                     Get to bed early today to meet your sleep goal between
                     8:45pm-9:30pm Get to bed early today to meet your sleep goal
                     between 8:45pm-9:30pm
@@ -72,7 +72,7 @@ export default function Dashboard() {
                   }`}
                 >
                   <AccordionTrigger>Goals</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className="DMSans">
                     Yes. It adheres to the WAI-ARIA design pattern.
                   </AccordionContent>
                 </AccordionItem>
@@ -85,7 +85,7 @@ export default function Dashboard() {
                   }`}
                 >
                   <AccordionTrigger>Key Insights</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className="DMSans">
                     Yes. It adheres to the WAI-ARIA design pattern. Yes. It
                     adheres to the WAI-ARIA design pattern.
                   </AccordionContent>
@@ -93,6 +93,279 @@ export default function Dashboard() {
               </Accordion>
             </div>
 
+            <div className="mt-5 flex gap-10">
+              <div>
+                <div className="flex justify-between">
+                  <p className="mb-3">Key Markers</p>
+                  <button className="mb-3">dive </button>
+                </div>
+                <Flex
+                  direction="column"
+                  gap="3"
+                  maxWidth="350px"
+                  className="max-h-[260px] overflow-auto scrollbar_1px pr-2 w-[350px]"
+                >
+                  <Card variant="surface" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                      <div>
+                        <Text as="div" size="2" weight="bold">
+                          Sleep
+                        </Text>
+                        <div className="flex items-center gap-2">
+                          <Text as="div" color="gray" size="2">
+                            Average
+                          </Text>
+                          <Text as="div" color="red" className="text-xs">
+                            · 7.5 hours
+                          </Text>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                </Flex>
+              </div>
+              <div>
+                <div className="flex justify-between">
+                  <p className="mb-3">Wearable data</p>
+                  <button className="mb-3">dive </button>
+                </div>
+                <Flex
+                  direction="column"
+                  gap="3"
+                  maxWidth="350px"
+                  className="max-h-[260px] overflow-auto scrollbar_1px pr-2 w-[350px]"
+                >
+                  <Card variant="surface" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-green-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="green" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-green-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="green" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-green-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="green" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card variant="classic" className="mb-2 px-2 py-1 flex">
+                    <div className=" bg-red-500 w-2 rounded-md mr-2"></div>
+                    <div>
+                      <Text as="div" size="2" weight="bold">
+                        Sleep
+                      </Text>
+                      <div className="flex items-center gap-2">
+                        <Text as="div" color="gray" size="2">
+                          Average
+                        </Text>
+                        <Text as="div" color="red" className="text-xs">
+                          · 7.5 hours
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                </Flex>
+              </div>
+            </div>
+          </Tabs.Content>
+          <Tabs.Content value="sleep" className="TabsContent">
+            <div className="flex gap-5">
+              <Card className="w-60 h-60 bg-violet-100 ">
+                <CardContent>
+                  <p className="mt-3">AI Summery</p>
+                  <p className="mt-3 text-sm">
+                    Get to bed early today to meet your sleep goal between
+                    8:45pm-9:30pm Get to bed early today to meet your sleep goal
+                    between 8:45pm-9:30pm
+                  </p>
+                </CardContent>
+              </Card>
+              <ChartTwo />
+              <ChartOne />
+            </div>
             <div className="mt-5 flex gap-10">
               <div>
                 <div className="flex justify-between">
@@ -349,21 +622,6 @@ export default function Dashboard() {
                   </Card>
                 </Flex>
               </div>
-            </div>
-          </Tabs.Content>
-          <Tabs.Content value="sleep" className="TabsContent">
-            <div className="flex gap-5">
-              <Card className="w-60 h-60 bg-violet-100 ">
-                <CardContent>
-                  <p className="mt-3">AI Summery</p>
-                  <p className="mt-3 text-sm">
-                    Get to bed early today to meet your sleep goal between
-                    8:45pm-9:30pm Get to bed early today to meet your sleep goal
-                    between 8:45pm-9:30pm
-                  </p>
-                </CardContent>
-              </Card>
-              <ChartTwo  />
             </div>
           </Tabs.Content>
 

@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           {/* ===== Header End ===== */}
           {/* ===== Main Content Start ===== */}
           <main className="relative">
-            <div className="mx-auto max-w-screen-2xl px-4 md:px-6 2xl:px-10">
+            <div className="mx-auto ">
               {children}
             </div>
           </main>

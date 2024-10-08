@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 const options = {
-  colors: ["#3C50E0", "#80CAEE"],
+  colors: ["#1B0442", "#3B088D", "#8A5DD3"],
   chart: {
     fontFamily: "Satoshi, sans-serif",
     type: "bar",
@@ -17,19 +17,19 @@ const options = {
       enabled: false,
     },
   },
-  responsive: [
-    {
-      breakpoint: 1536,
-      options: {
-        plotOptions: {
-          bar: {
-            borderRadius: 0,
-            columnWidth: "25%",
-          },
-        },
-      },
-    },
-  ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1536,
+  //     options: {
+  //       plotOptions: {
+  //         bar: {
+  //           borderRadius: 0,
+  //           columnWidth: "25%",
+  //         },
+  //       },
+  //     },
+  //   },
+  // ],
   plotOptions: {
     bar: {
       horizontal: false,
@@ -56,7 +56,17 @@ const options = {
     },
   },
   fill: {
-    opacity: 1,
+    colors: [
+      function ({ value }) {
+        if (value < 25) {
+          return "#8A5DD3";
+        } else if (value >= 25 && value < 40) {
+          return "#3B088D";
+        } else {
+          return "#1B0442";
+        }
+      },
+    ],
   },
 };
 
@@ -82,11 +92,11 @@ const ChartTwo = () => {
   handleReset;
 
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
+    <div className="col-span-12 rounded-md border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
       <div className=" justify-between gap-4 sm:flex">
         <div>
           <h4 className="text-lg font-semibold text-black dark:text-white">
-            Profit this week
+            Sleep Trends
           </h4>
         </div>
         <div>

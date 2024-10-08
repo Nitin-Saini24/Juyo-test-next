@@ -7,6 +7,27 @@
 @import "@radix-ui/colors/mauve.css";
 @import "@radix-ui/colors/violet.css";
 
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/assets/fonts/Instrument_Sans/InstrumentSans-Regular.ttf') format('truetype'),;
+  font-weight: 400; /* Adjust the weight based on the available fonts */
+  font-style: normal; /* Adjust based on the font (normal, italic, etc.) */
+}
+@font-face {
+  font-family: 'DMSans';
+  src: url('/assets/fonts/DMsans/DMSans-Regular.ttf') format('truetype'),;
+  font-weight: 400; /* Adjust the weight based on the available fonts */
+  font-style: normal; /* Adjust based on the font (normal, italic, etc.) */
+}
+
+/* Apply the font globally */
+body {
+  font-family: 'InstrumentSans', sans-serif;
+}
+
+.DMSans {
+  font-family: 'DMSans', sans-serif;
+}
 /* reset */
 
 
@@ -59,7 +80,6 @@
 
 .TabsContent {
 	flex-grow: 1;
-	padding-top: 20px;
 	background-color: white;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
@@ -131,9 +151,9 @@
 }
 
 
-body {
+/* body {
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 @layer utilities {
   .text-balance {
