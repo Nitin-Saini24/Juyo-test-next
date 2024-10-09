@@ -13,7 +13,8 @@ export const Sidebar = () => {
   const isActive = pathname;
   return (
     <div className="bg-white h-screen p-4  absolute left-0 top-0 z-[9999] flex flex-col items-center">
-      <nav className="border h-[100%] rounded-full w-16  bg-gray-100 shadow-lg overflow-y-auto no-scrollbar">
+      <nav className="border h-[100%] inline-block
+       rounded-full w-16  bg-gray-100 shadow-lg overflow-y-auto no-scrollbar">
         <aside className="flex-col flex items-center py-3 justify-between h-full ">
           <div className="flex-col flex items-center ">
             <span
