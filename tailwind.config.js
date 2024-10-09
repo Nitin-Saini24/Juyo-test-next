@@ -9,6 +9,10 @@ module.exports = {
 		// Or if using `src` directory:
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	safelist: [
+		'py-3',
+		'h-[100%]',
+	],
 	theme: {
 		extend: {
 			colors: {
