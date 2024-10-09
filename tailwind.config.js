@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ["class"],
-	mode: 'jit',
 	content: [
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,9 +30,14 @@ module.exports = {
 		'justify-center',
 		'items-center',
 		'w-1/2',
+		'flex',
 		'w-full',
 		'justify-between',
 		'px-4',
+		'items-center',
+		'w-full',
+		'flex',
+
 	],
 	theme: {
 		extend: {

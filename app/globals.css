@@ -1,11 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "@radix-ui/colors/black-alpha.css";
 @import "@radix-ui/colors/green.css";
 @import "@radix-ui/colors/mauve.css";
 @import "@radix-ui/colors/violet.css";
+
+/* Tailwind CSS styles (after radix base styles) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 @font-face {
   font-family: 'InstrumentSans';
