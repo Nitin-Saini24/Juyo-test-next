@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button } from "../../components/ui/button";
-import { Input } from "../../components/ui/input";
-import { Checkbox } from "../../components/ui/checkbox";
+// import { Button } from "../../components/ui/button";
+// import { Input } from "../../components/ui/input";
+// import { Checkbox } from "../../components/ui/checkbox";
 import {
   Table,
   TableBody,
@@ -98,7 +98,7 @@ const TableWithPagination = () => {
   return (
     <div className="p-4">
       {/* Filters */}
-      <div className="flex justify-between mb-4">
+      {/* <div className="flex justify-between mb-4">
         <div className="space-x-2">
           <Button variant="outline">All time</Button>
           <Button variant="outline">US, AU, +4</Button>
@@ -111,7 +111,7 @@ const TableWithPagination = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-      </div>
+      </div> */}
 
       {/* Table */}
       <div className="overflow-hidden border rounded-lg">
@@ -120,7 +120,7 @@ const TableWithPagination = () => {
             <TableRow>
               <TableHead className="w-[60%]">
                 <div className="flex items-center gap-2">
-                  <Checkbox className="bg-gray-200" /> Clients
+                  {/* <Checkbox className="bg-gray-200" /> Clients */}
                 </div>
               </TableHead>
               <TableHead className="text-center">Healthscore</TableHead>
@@ -133,7 +133,7 @@ const TableWithPagination = () => {
               <TableRow key={row.id}>
                 <TableCell>
                   <div className="flex items-center space-x-4">
-                    <Checkbox className="bg-gray-200" />
+                    {/* <Checkbox className="bg-gray-200" /> */}
                     <img
                       src="https://via.placeholder.com/40"
                       alt="User Avatar"
@@ -150,12 +150,12 @@ const TableWithPagination = () => {
                   {row.lastInteraction}
                 </TableCell>
                 <TableCell className="flex space-x-2 text-center">
-                  <Button variant="ghost" size="icon">
-                    {/* <Icons.phone /> */}
-                  </Button>
-                  <Button variant="ghost" size="icon">
-                    {/* <Icons.edit /> */}
-                  </Button>
+                  {/* <Button variant="ghost" size="icon"> */}
+                  {/* <Icons.phone /> */}
+                  {/* </Button> */}
+                  {/* <Button variant="ghost" size="icon"> */}
+                  {/* <Icons.edit /> */}
+                  {/* </Button> */}
                 </TableCell>
               </TableRow>
             ))}
@@ -163,18 +163,18 @@ const TableWithPagination = () => {
         </Table>
         {/* {pageination}     */}
         <div className="flex justify-between items-center mt-4">
-          <Button
+          {/* <Button
             variant="outline"
             onClick={() =>
               setCurrentPage(currentPage > 1 ? currentPage - 1 : 1)
             }
           >
             Previous
-          </Button>
+          </Button> */}
           <p>
             Page {currentPage} of {totalPages}
           </p>
-          <Button
+          {/* <Button
             variant="outline"
             onClick={() =>
               setCurrentPage(
@@ -183,7 +183,7 @@ const TableWithPagination = () => {
             }
           >
             Next
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

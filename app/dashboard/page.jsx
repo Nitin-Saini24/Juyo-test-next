@@ -10,13 +10,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../../Components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "../../Components/ui/accordion";
 import { useState } from "react";
 // import ChartOne from "@/Components/Charts/ChartOne";
 // import ChartTwo from "@/Components/Charts/ChartTwo";
