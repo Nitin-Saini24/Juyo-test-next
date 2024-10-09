@@ -1,3 +1,4 @@
+"use client";
 import ClientCard from "@/Components/clientCard/ClientCard";
 import React from "react";
 
